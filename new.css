@@ -1,33 +1,40 @@
-*{
+/* Base styles for all devices */
+* {
     margin: 0;
     padding: 0;
-    font-family: "ubuntu";
+    font-family: "Ubuntu";
 }
-.nav{
+
+/* Navigation styles */
+.nav {
     display: flex;
     justify-content: space-between;
     padding: 30px;
 }
-.nav .brand{
+
+.nav .brand {
     display: flex;
 }
-.nav .brand img{
+
+.nav .brand img {
     width: 80px;
     height: auto;
     transform: rotate(-45deg);
 }
-.links{
+
+.links {
     display: flex;
     justify-content: space-evenly;
 }
-.links a{
+
+.links a {
     text-decoration: none;
     margin: 0 5px;
     color: black;
     font-weight: 700;
 }
 
-.links button{
+.links button {
     border: none;
     color: black;
     background-color: aqua;
@@ -36,58 +43,126 @@
     margin: -10px 10px -0 10px;
     font-weight: 700;
 }
-.links .icons i{
+
+.links .icons i {
     color: rgb(54, 54, 250);
     margin: 0 5px;
 }
 
-.about{
+/* About section */
+.about {
     background-color: #6A36A2;
     padding: 20px;
     text-align: center;
     color: white;
 }
 
-.main{
+.main {
     display: flex;
+    flex-direction: column-reverse; /* For mobile, reverse the column order */
+    align-items: center; /* Center align content */
+
     background-color: #8756bb;
-    padding: 100px;
-    justify-content: space-between;
+    padding: 20px; /* Reduce padding for smaller screens */
 }
-.main .big img{
-    width: 450px;
+
+.main .big img {
+    max-width: 100%; /* Make the image responsive by setting max-width to 100% */
     height: auto;
+    margin-top: 20px; /* Add some spacing between the image and text for larger screens */
 }
-.small{
+
+.small {
     color: white;
 }
-.small h1{
-    margin: 15px 0;
-}
-.small h3{
+
+.small h1 {
     margin: 15px 0;
 }
 
-.icon a{
+.small h3 {
+    margin: 15px 0;
+}
+
+.icon a {
     color: white;
 }
-.icon i{
+
+.icon i {
     margin: 20px 5px;
 }
-.icon i:hover{
+
+.icon i:hover {
     transform: scale(1.5);
-    transition: .5s;
+    transition: 0.5s;
     filter: drop-shadow(1px 1px black);
 }
-.youtube:hover{
+
+.youtube:hover {
     color: red;
 }
-.google:hover{
-    color:green;
+
+.google:hover {
+    color: green;
 }
-.facebook:hover{
-    color:blue;
+
+.facebook:hover {
+    color: blue;
 }
-.linkedin:hover{
-    color:rgb(50, 80, 252)
+
+.linkedin:hover {
+    color: rgb(50, 80, 252);
+}
+
+/* Media queries for responsiveness */
+
+/* Mobile devices */
+@media (max-width: 767px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main {
+        padding: 40px; /* Increase padding for better spacing */
+    }
+
+    .nav .brand img {
+        width: 60px;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .links a {
+        margin: 10px 0;
+    }
+
+    .links button {
+        margin: 10px 0;
+    }
+}
+
+/* Tablets and small screen laptops */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .nav .brand img {
+        width: 70px;
+    }
+}
+
+/* Large screen laptops and desktops */
+@media (min-width: 1024px) {
+    .nav {
+        padding: 20px;
+    }
+
+    .nav .brand img {
+        width: 80px;
+    }
+
+    .links {
+        margin-top: 0;
+    }
 }
