@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "ubuntu";
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+.nav .brand{
+    display: flex;
+}
+.nav .brand img{
+    width: 80px;
+    height: auto;
+    transform: rotate(-45deg);
+}
+.links{
+    display: flex;
+    justify-content: space-evenly;
+}
+.links a{
+    text-decoration: none;
+    margin: 0 5px;
+    color: black;
+    font-weight: 700;
+}
+
+.links button{
+    border: none;
+    color: black;
+    background-color: aqua;
+    border-radius: 20px;
+    padding: 10px;
+    margin: -10px 10px -0 10px;
+    font-weight: 700;
+}
+.links .icons i{
+    color: rgb(54, 54, 250);
+    margin: 0 5px;
+}
+
+.about{
+    background-color: #6A36A2;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.main{
+    display: flex;
+    background-color: #8756bb;
+    padding: 100px;
+    justify-content: space-between;
+}
+.main .big img{
+    width: 450px;
+    height: auto;
+}
+.small{
+    color: white;
+}
+.small h1{
+    margin: 15px 0;
+}
+.small h3{
+    margin: 15px 0;
+}
+
+.icon a{
+    color: white;
+}
+.icon i{
+    margin: 20px 5px;
+}
+.icon i:hover{
+    transform: scale(1.5);
+    transition: .5s;
+    filter: drop-shadow(1px 1px black);
+}
+.youtube:hover{
+    color: red;
+}
+.google:hover{
+    color:green;
+}
+.facebook:hover{
+    color:blue;
+}
+.linkedin:hover{
+    color:rgb(50, 80, 252)
+}
